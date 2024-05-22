@@ -1,6 +1,6 @@
-from django.urls import include, path
-from .views import MenuItemsView, BookingView, SingleMenuItemView
+from django.urls import path
 
+from .views import MenuItemsView, BookingView, SingleMenuItemView
 
 urlpatterns = [
     path("menu/", MenuItemsView.as_view()),

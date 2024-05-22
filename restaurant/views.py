@@ -8,11 +8,12 @@ from rest_framework.response import Response
 from django.contrib.auth.models import User
 
 from .models import Booking, MenuItem
-from .serializers import BookingSerializer, MenuSerializer, UserSerializer
+from ..LittleLemonAPI.serializers import BookingSerializer, MenuSerializer, UserSerializer
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import permissions
-
+#is authneticated decorator
+from rest_framework.decorators import api_view, permission_classes
 
 class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
@@ -55,3 +56,4 @@ class SingleMenuItemView(RetrieveUpdateAPIView, DestroyAPIView):
 class BookingViewSets(viewsets.ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
+
