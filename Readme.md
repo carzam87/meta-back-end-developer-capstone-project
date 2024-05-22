@@ -7,7 +7,8 @@ This is the API for the Little Lemon Restaurant Capstone Project. The API is bui
 1. Clone the repository
 2. Create a virtual environment
 3. Install the requirements
-4. Run the server
+4. Update the settings.py database credentials
+5. Run the server
 
 ```bash
 git clone
