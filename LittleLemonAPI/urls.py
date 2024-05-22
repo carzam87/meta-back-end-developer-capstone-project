@@ -1,12 +1,14 @@
-from django.urls import path
+from django.urls import path, include
 from rest_framework.authtoken.views import obtain_auth_token
+from rest_framework.routers import DefaultRouter
+from .views import MenuItemViewSet, BookingViewSet, RegistrationView
 
-from LittleLemonAPI import views
-
+router = DefaultRouter()
+router.register(r'menu-items', MenuItemViewSet)
+router.register(r'bookings', BookingViewSet)
 
 urlpatterns = [
-        path('menu-items/', views.MenuItemsView.as_view()),
-        path('menu-items/<int:pk>', views.SingleMenuItemView.as_view()),
-        path('message/', views.msg),
+        path('', include(router.urls)),
         path("api-token-auth/", obtain_auth_token, name="api_token_auth"),
+        path('register/', RegistrationView.as_view()),
 ]

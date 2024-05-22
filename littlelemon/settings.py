@@ -31,18 +31,24 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # Django apps
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "LittleLemonAPI",
-    # "restaurant",
+    
+    
+    # Third party apps
     "rest_framework",
-    "django_extensions",
     'rest_framework.authtoken',
-    'djoser'
+    "django_extensions",
+    'djoser',
+
+    #My Apps
+    "restaurant",
+    "LittleLemonAPI",
 ]
 
 MIDDLEWARE = [

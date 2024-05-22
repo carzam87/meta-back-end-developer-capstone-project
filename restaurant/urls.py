@@ -1,9 +1,10 @@
 from django.urls import path
-
-from .views import MenuItemsView, BookingView, SingleMenuItemView
+ 
+from . import views
 
 urlpatterns = [
-    path("menu/", MenuItemsView.as_view()),
-    path("menu/<int:pk>", SingleMenuItemView.as_view()),
-    path("bookings/", BookingView.as_view(), name="booking"),
+    path("", 
+    views.index, 
+    name="home"  ),
+   
 ]
