@@ -19,11 +19,17 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
-##You can test all the following endpoints:
+## You can test all the following endpoints:
 
-/api/bookings/
-/api/menu-items/
-/api/register/
+### Bookings
+
+    /api/bookings/
+### Menu Items
+
+    /api/menu-items/
+### Register
+
+    /api/register/
 
 > **_NOTE:_**
     You can test all the CRUD operations for the bookings and menu items endpoints. The register endpoint is used to create a new user.
